@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+    <body>
+        <img data-th-src="${game.image}"></span>
+        <p>Game Name: <span data-th-text="${game.name}"></span></p>
+        <p>ID: <span data-th-text="${game.gameId}"></span></p>
+        <p>Year released: <span data-th-text="${game.year}"></span></p>
+        <p>Game ranking: <span data-th-text="${game.ranking}"></span></p>
+        <p>Users rated: <span data-th-text="${game.users_rated}"></span></p>
+        <p>Users comments:</p>
+        <table border="1">
+            <tr data-th-each="c: ${comment}">
+                <td><p data-th-text="${c.cId}"></p></td>
+                <td><p data-th-text="${c.cText}"></p></td>
+            </tr>
+        </table>
+    </body>
+</html>
